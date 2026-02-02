@@ -20,13 +20,9 @@ var jsonSource_QField_Acquisitions_1 = new ol.source.Vector({
     attributions: ' ',
 });
 jsonSource_QField_Acquisitions_1.addFeatures(features_QField_Acquisitions_1);
-cluster_QField_Acquisitions_1 = new ol.source.Cluster({
-  distance: 30,
-  source: jsonSource_QField_Acquisitions_1
-});
 var lyr_QField_Acquisitions_1 = new ol.layer.Vector({
                 declutter: false,
-                source:cluster_QField_Acquisitions_1, 
+                source:jsonSource_QField_Acquisitions_1, 
                 style: style_QField_Acquisitions_1,
                 popuplayertitle: 'QField_Acquisitions',
                 interactive: true,
@@ -39,13 +35,9 @@ var jsonSource_waste_basket_OSM_MAPPED_2 = new ol.source.Vector({
     attributions: ' ',
 });
 jsonSource_waste_basket_OSM_MAPPED_2.addFeatures(features_waste_basket_OSM_MAPPED_2);
-cluster_waste_basket_OSM_MAPPED_2 = new ol.source.Cluster({
-  distance: 30,
-  source: jsonSource_waste_basket_OSM_MAPPED_2
-});
 var lyr_waste_basket_OSM_MAPPED_2 = new ol.layer.Vector({
                 declutter: false,
-                source:cluster_waste_basket_OSM_MAPPED_2, 
+                source:jsonSource_waste_basket_OSM_MAPPED_2, 
                 style: style_waste_basket_OSM_MAPPED_2,
                 popuplayertitle: 'waste_basket_OSM_MAPPED',
                 interactive: true,
@@ -59,7 +51,7 @@ lyr_waste_basket_OSM_MAPPED_2.set('fieldAliases', {'fid': 'fid', 'full_id': 'ful
 lyr_QField_Acquisitions_1.set('fieldImages', {'fid': 'TextEdit', 'stato': 'ValueMap', 'capacita': 'ValueMap', 'Note': 'TextEdit', 'Waste': 'ValueMap', 'access': 'ValueMap', });
 lyr_waste_basket_OSM_MAPPED_2.set('fieldImages', {'fid': 'TextEdit', 'full_id': 'TextEdit', 'osm_id': 'TextEdit', 'osm_type': 'TextEdit', 'amenity': 'TextEdit', 'colour': 'TextEdit', 'material': 'TextEdit', 'indoor': 'TextEdit', 'covered': 'TextEdit', 'wheelchair': 'TextEdit', 'level': 'TextEdit', 'waste': 'TextEdit', 'check_date': 'TextEdit', });
 lyr_QField_Acquisitions_1.set('fieldLabels', {'fid': 'header label - visible with data', 'stato': 'header label - visible with data', 'capacita': 'header label - visible with data', 'Note': 'header label - visible with data', 'Waste': 'header label - visible with data', 'access': 'header label - visible with data', });
-lyr_waste_basket_OSM_MAPPED_2.set('fieldLabels', {'fid': 'no label', 'full_id': 'no label', 'osm_id': 'header label - visible with data', 'osm_type': 'no label', 'amenity': 'no label', 'colour': 'no label', 'material': 'no label', 'indoor': 'no label', 'covered': 'no label', 'wheelchair': 'no label', 'level': 'no label', 'waste': 'header label - always visible', 'check_date': 'header label - visible with data', });
+lyr_waste_basket_OSM_MAPPED_2.set('fieldLabels', {'fid': 'no label', 'full_id': 'inline label - visible with data', 'osm_id': 'header label - visible with data', 'osm_type': 'no label', 'amenity': 'no label', 'colour': 'no label', 'material': 'no label', 'indoor': 'no label', 'covered': 'no label', 'wheelchair': 'no label', 'level': 'no label', 'waste': 'header label - always visible', 'check_date': 'header label - visible with data', });
 lyr_waste_basket_OSM_MAPPED_2.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
