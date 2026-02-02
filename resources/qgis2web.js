@@ -4,7 +4,7 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [516527.035676, 5035294.376869, 519594.360493, 5036884.982189], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+        extent: [516322.592241, 5035272.312919, 519389.917056, 5036862.918238], maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
             code: 'EPSG:32632',
             //extent: [517634.104374, 5035976.805900, 517973.578386, 5036207.188845],
             units: 'm'})
@@ -12,7 +12,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([516527.035676, 5035294.376869, 519594.360493, 5036884.982189], map.getSize());
+map.getView().fit([516322.592241, 5035272.312919, 519389.917056, 5036862.918238], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -501,7 +501,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-right-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">Relazione 6 (QFieldCloud)</h2>';
+        titleElement.innerHTML = '<h2 class="project-title">Relazione 6</h2>';
         return titleElement;
     })(),
     target: 'top-right-container'
